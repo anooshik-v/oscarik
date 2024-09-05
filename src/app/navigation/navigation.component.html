@@ -1,28 +1,41 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+<mat-sidenav-container class="sidenav-container main-color">
+  <mat-sidenav #drawer class="sidenav  sidebar-color" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+  
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+      [opened]="(isHandset$ | async) === false" >
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item routerLink="home" [routerLinkActive]="['active']">Home</a>
+      <a mat-list-item routerLink="about" [routerLinkActive]="['active']">About</a>
+      <a mat-list-item routerLink="skills" [routerLinkActive]="['active']">Skills</a>
+      <a mat-list-item routerLink="portfolio" [routerLinkActive]="['active']">Portfolio</a>
+      <a mat-list-item routerLink="testimonials" [routerLinkActive]="['active']">Testimonials</a>
+      <a mat-list-item routerLink="work-experience" [routerLinkActive]="['active']">Work Experience</a>
+      <a mat-list-item routerLink="fun-facts" [routerLinkActive]="['active']">Fun Facts</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+<div>
+  </div>
+    <mat-toolbar class="main-color">
       @if (isHandset$ | async) {
         <button
-          type="button"
+          type="button" 
           aria-label="Toggle sidenav"
           mat-icon-button
           (click)="drawer.toggle()">
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
       }
-      <span>oscarik-resume</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
-  </mat-sidenav-content>
+<div style="padding: 32px;">
+   <router-outlet></router-outlet>
+  
+<footer>
+  Sniffed your way to the bottom? Thanks for visiting! If you need me, I'll be chasing bicycles, perfecting my nap game, or waiting patiently by the treat jar. Stay positive and bark on!
+
+</footer>
+<app-paw-trail></app-paw-trail>
+</div> 
+</mat-sidenav-content>
 </mat-sidenav-container>

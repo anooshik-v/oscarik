@@ -1,0 +1,21 @@
+<h3>Testimonials</h3>
+What do people (and other pets) have to say about Oscar? Here's a collection of glowing reviews:
+<div class="card-container">
+
+@for(testimony of testimonials; track testimony; let e= $even){
+<mat-card class="card" appearance="outlined"  [ngClass]="{ 'card-even': e}"
+>
+ 
+  <mat-card-content>
+    <p>
+      <i>  " {{testimony.review}}"</i> </p>
+  </mat-card-content>
+  <mat-card-header>
+    <div mat-card-avatar style="background-image: url({{testimony.url}});
+background-size: cover;"></div>
+    <mat-card-title>{{testimony.name}}</mat-card-title>
+    <mat-card-subtitle>{{testimony.position}}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+}
+</div>

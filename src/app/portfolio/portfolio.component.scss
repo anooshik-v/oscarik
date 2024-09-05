@@ -1,0 +1,19 @@
+.gallery-grid {
+    margin: 16px;
+  }
+  
+  .image-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional overlay for better text visibility */
+  }
+  
+  .mat-grid-tile {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  

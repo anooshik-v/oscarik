@@ -1,0 +1,31 @@
+.paw-print-trail {
+  position: absolute;
+  right: 20px;
+  bottom: 10px; 
+  display: flex;
+  flex-direction: column; /* Stack icons vertically */
+  align-items: flex-start; /* Align icons to the left */
+  gap: 10px; /* Space between paw prints */
+}
+
+.paw-print-trail mat-icon {
+  font-size: 24px; 
+  color: #000; 
+  opacity: 0.7; /* Slightly transparent */
+  transition: transform 0.3s ease;
+}
+
+.paw-left {
+  margin-left: 0; /* Align to the left */
+  transform: rotate(-20deg); /* Slightly rotate to the left */
+}
+
+.paw-right {
+  margin-left: 20px; /* Adjust to position the icon to the right */
+  transform: rotate(-20deg); /* Slightly rotate to the left */
+}
+
+/* Optional: Hover effect */
+.paw-print-trail mat-icon:hover {
+  transform: scale(1.5) rotate(-20deg); /* Slight zoom and rotation on hover */
+}

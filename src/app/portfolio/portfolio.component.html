@@ -1,0 +1,21 @@
+<h3>Portfolio</h3>
+<p>A gallery of my majestic photoshoots, ranging from "Oscar in the park" to "Oscar discovers the vacuum cleaner"</p>
+
+
+
+<mat-grid-list cols="5" rowHeight="600px" gutterSize="16px" class="gallery-grid">
+    @for( image of images; track image)
+    {
+      <mat-grid-tile
+      [style.backgroundImage]="'url(' + image + ')'"
+      [style.backgroundSize]="'cover'"
+      [style.backgroundPosition]="'center center'"
+      (click)="openDialog(image)">
+      
+      <mat-card class="image-card">
+        <!-- Optionally add a card header or description here -->
+      </mat-card>
+    </mat-grid-tile>
+}
+  </mat-grid-list>
+  

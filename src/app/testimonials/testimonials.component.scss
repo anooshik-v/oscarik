@@ -1,0 +1,21 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    gap: 16px; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+    padding: 16px; /* Padding around the container */
+  }
+  
+  .card {
+    width: 300px; /* Adjust width as needed */
+    margin: 8px; /* Space around each card */
+    background-color: #ffe083;  
+  
+}
+
+.card-even {
+    background-color: #bce0fb;  
+ 
+}
+
+  

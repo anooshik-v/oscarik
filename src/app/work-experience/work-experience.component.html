@@ -1,0 +1,20 @@
+
+<h3>Work Experience</h3>
+<mat-accordion class="accordion" multi>
+  @for(experience of experiences; track experience)
+  {
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>    {{experience.position}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>  {{experience.position}}</p>
+    <p>  {{experience.time}}</p>
+
+    <p>  {{experience.description}}</p>
+
+      
+  </mat-expansion-panel>
+
+}
+</mat-accordion>
